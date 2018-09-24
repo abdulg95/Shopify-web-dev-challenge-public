@@ -132,12 +132,7 @@ onClick = (event) => {
     let mapping;
     let new_tag_names;
     console.log(searchTerm);
-    fetch(endpoint, {
-        method: 'GET',
-        headers: {
-          'Authorization': 'Bearer ' + "160433c9600d08415a6fbb9ebda06e95e74202cd"
-        }  
-      })
+    fetch(endpoint)
       .then(blob => blob.json())
       .then(response => {
           this.setState({ repositories: response.items });
